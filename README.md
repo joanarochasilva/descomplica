@@ -2,26 +2,17 @@
 
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 16.2.9.
 
-## Development server
 
-Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The application will automatically reload if you change any of the source files.
+**Esse projeto tem como objetivo responder ao primeiro pensar e responder do módulo de desenvolvimento mobile. A questão é apresentada como segue abaixo:**
 
-## Code scaffolding
+Conforme citado no material, o angular nos permite criar módulos distintos e importar todas as suas dependências para acessar em outros módulos, formando assim uma aplicação organizada e facilitando a utilização de bibliotecas de terceiros.
 
-Run `ng generate component component-name` to generate a new component. You can also use `ng generate directive|pipe|service|class|guard|interface|enum|module`.
+Outra coisa que isso permite é distribuir a declaração de rotas entre módulos filhos, e importá-los no módulo pai. A técnica e sintaxe para isso não foi discutida, mas pode ser encontrada.
 
-## Build
+Faça uma pesquisa sobre como criar rotas filhas usando essa técnica e apresente um exemplo simples que utilize dois módulos declarando suas rotas que serão importadas no módulo pai. Teste sua aplicação local para ter certeza de que funciona.
 
-Run `ng build` to build the project. The build artifacts will be stored in the `dist/` directory.
+Dicas: Pesquise por “Angular router in submodules forChild”.
 
-## Running unit tests
+A diretiva RouterModule.forChild será usada para criar rotas no módulo filho, e a diretiva RouterModule.forRoot será usada para criar rotas no módulo principal ou módulo pai. As rotas do módulo pai devem utilizar uma propriedade loadChildren para carregar o módulo em um path especifico.
 
-Run `ng test` to execute the unit tests via [Karma](https://karma-runner.github.io).
-
-## Running end-to-end tests
-
-Run `ng e2e` to execute the end-to-end tests via a platform of your choice. To use this command, you need to first add a package that implements end-to-end testing capabilities.
-
-## Further help
-
-To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI Overview and Command Reference](https://angular.io/cli) page.
+Para testar no navegador utilize o path que escolher para o loadChildren, mais o path para as rotas declaradas no módulo. Exemplo: /modulo1/child1
